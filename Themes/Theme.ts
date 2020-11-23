@@ -6,7 +6,7 @@ class Colors {
   readonly background = "#000";
   readonly backgroundContrast = "#FFF";
 
-  readonly primary = "#35abff";
+  readonly primary = "#ff9a00";
 }
 
 class Sizes {

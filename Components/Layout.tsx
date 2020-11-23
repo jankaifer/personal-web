@@ -7,6 +7,7 @@ import values from "Configs/values";
 
 const RootDiv = styled.div`
   width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -40,15 +41,35 @@ const LogoRest = styled.span`
 `;
 
 const SiteContent = styled.main`
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing(1)}px;
+  margin: ${({ theme }) => `${theme.spacing(10)}px ${theme.spacing(2)}px`};
 `;
 
 const SiteContentContainer = styled.div`
+  flex-grow: 1;
+
   ${({ theme }) => css`
     max-width: ${theme.maxPageWidth}px;
     padding: ${theme.spacing(2)}px ${theme.spacing(1)}px;
+  `}
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+`;
+
+const FooterContent = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  ${({ theme }) => css`
+    max-width: ${theme.maxPageWidth}px;
+    padding: ${theme.spacing(2)}px ${theme.spacing(1)}px ${theme.spacing(4)}px
+      ${theme.spacing(1)}px;
   `}
 `;
 
@@ -71,6 +92,15 @@ const Layout = ({ children, home = false }: Props) => {
       <SiteContent>
         <SiteContentContainer>{children}</SiteContentContainer>
       </SiteContent>
+      <Footer>
+        <FooterContent>
+          {!home && (
+            <Link href="/">
+              <a>&larr; Go back home</a>
+            </Link>
+          )}
+        </FooterContent>
+      </Footer>
     </RootDiv>
   );
 };
