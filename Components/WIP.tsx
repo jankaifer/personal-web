@@ -13,7 +13,7 @@ const WIP = () => {
       <h1>This web is under construction</h1>
       <p>
         In the meantime you can checkout my{" "}
-        <a href="web-v1.kaifer.cz">old web</a>.
+        <a href="https://web-v1.kaifer.cz">old web</a>.
       </p>
     </Section>
   );
