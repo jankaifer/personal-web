@@ -1,10 +1,56 @@
-import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+import styled, { css } from "styled-components";
 
 import profile from "Assets/images/profile.jpg";
-import utilStyles from "Styles/utils.module.scss";
+import values from "Configs/values";
 
-import styles from "./layout.module.scss";
+const RootDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+`;
+
+const Header = styled.header`
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  padding: 0 ${({ theme }) => theme.spacing(1)}px;
+`;
+
+const HeaderContent = styled.div`
+  max-width: ${({ theme }) => theme.maxPageWidth}px;
+  flex-grow: 1;
+  padding: ${({ theme }) => `${theme.spacing(1)}px ${theme.spacing(2)}px`};
+
+  border-bottom: ${({ theme }) => theme.colors.backgroundContrast} solid 1px;
+`;
+
+const Logo = styled.div`
+  font-size: ${({ theme }) => theme.sizes.logo};
+`;
+
+const LogoName = styled.span``;
+
+const LogoRest = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.secondaryText};
+  `}
+`;
+
+const SiteContent = styled.main`
+  display: flex;
+  justify-content: center;
+  padding: ${({ theme }) => theme.spacing(1)}px;
+`;
+
+const SiteContentContainer = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.maxPageWidth}px;
+    padding: ${theme.spacing(2)}px ${theme.spacing(1)}px;
+  `}
+`;
 
 type Props = {
   children: React.ReactNode;
@@ -12,51 +58,20 @@ type Props = {
 };
 
 const Layout = ({ children, home = false }: Props) => {
-  const name = "Jan Kaifer";
-
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Next blog</title>
-      </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src={profile}
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src={profile}
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
-    </div>
+    <RootDiv>
+      <Header>
+        <HeaderContent>
+          <Logo>
+            <LogoName>{values.name}</LogoName>
+            <LogoRest>'s web</LogoRest>
+          </Logo>
+        </HeaderContent>
+      </Header>
+      <SiteContent>
+        <SiteContentContainer>{children}</SiteContentContainer>
+      </SiteContent>
+    </RootDiv>
   );
 };
 
