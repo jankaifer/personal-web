@@ -33,8 +33,11 @@ const HeaderContent = styled.div`
   border-bottom: ${({ theme }) => theme.colors.backgroundContrast} solid 1px;
 `;
 
-const Logo = styled.div`
-  font-size: ${({ theme }) => theme.sizes.logo};
+const Logo = styled.a`
+  ${({ theme }) => css`
+    font-size: ${theme.sizes.logo};
+    color: ${theme.colors.text};
+  `}
 `;
 
 const LogoName = styled.span``;
@@ -111,7 +114,7 @@ const Layout = ({ children, home = false, title }: Props) => {
       <RootDiv>
         <Header>
           <HeaderContent>
-            <Logo>
+            <Logo href="/">
               <LogoName>{values.name}</LogoName>
               <LogoRest>'s web</LogoRest>
             </Logo>
