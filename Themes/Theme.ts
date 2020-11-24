@@ -33,7 +33,7 @@ class Theme {
   };
 
   get maxPageWidth() {
-    return this.breakpoints.md;
+    return this.breakpoints.lg;
   }
 }
 

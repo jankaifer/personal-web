@@ -14,7 +14,7 @@ const XKCDLinkWrapper = styled.div`
 
 const Error404 = () => {
   return (
-    <Layout>
+    <Layout title="Not found">
       <H1>Content is not available in your country</H1>
       <XKCDLinkWrapper>
         <a href="https://xkcd.com/1969/">
