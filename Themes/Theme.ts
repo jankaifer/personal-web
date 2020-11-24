@@ -1,10 +1,10 @@
 class Colors {
-  readonly text = "#FFF";
+  readonly text = "#DDD";
   readonly secondaryText = "#888";
   readonly textContrast = "#000";
 
   readonly background = "#000";
-  readonly backgroundContrast = "#FFF";
+  readonly backgroundContrast = "#AAA";
 
   readonly primary = "#ff9a00";
 }
