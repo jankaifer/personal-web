@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import { config } from "process";
 import styled, { css } from "styled-components";
 
-import profile from "Assets/images/profile.jpg";
 import { tabs } from "Configs/paths";
 import values from "Configs/values";
 
@@ -28,15 +25,17 @@ const HeaderContent = styled.div`
   flex-wrap: wrap;
   flex-grow: 1;
 
-  max-width: ${({ theme }) => theme.maxPageWidth}px;
-  padding: ${({ theme }) => `${theme.spacing(1)}px ${theme.spacing(2)}px`};
-  border-bottom: ${({ theme }) => theme.colors.backgroundContrast} solid 1px;
+  ${({ theme }) => css`
+    max-width: ${theme.maxPageWidth}px;
+    border-bottom: ${theme.colors.backgroundContrast} solid 1px;
+  `}
 `;
 
 const Logo = styled.a`
   ${({ theme }) => css`
     font-size: ${theme.sizes.logo};
     color: ${theme.colors.text};
+    padding: ${theme.spacing(1)}px ${theme.spacing(2)}px;
   `}
 `;
 
@@ -81,7 +80,9 @@ const FooterContent = styled.div`
   `}
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  display: flex;
+`;
 
 const NavList = styled.ol`
   list-style: none;
@@ -92,8 +93,15 @@ const NavList = styled.ol`
 `;
 
 const NavItem = styled.li`
+  display: flex;
+`;
+
+const NavLink = styled.a`
+  display: flex;
+  align-items: center;
+
   ${({ theme }) => css`
-    margin: ${theme.spacing(1)}px;
+    padding: ${theme.spacing(2)}px ${theme.spacing(1)}px;
   `}
 `;
 
@@ -123,7 +131,9 @@ const Layout = ({ children, home = false, title }: Props) => {
                 {tabs.map(({ name, path }) => (
                   <NavItem key={path}>
                     <Link href={path}>
-                      <a>{name}</a>
+                      <NavLink>
+                        <span>{name}</span>
+                      </NavLink>
                     </Link>
                   </NavItem>
                 ))}

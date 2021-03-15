@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     a {
       color: ${theme.colors.primary};
       text-decoration: none;
+      cursor: pointer;
 
       &:hover {
         text-decoration: underline;
