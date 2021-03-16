@@ -152,10 +152,6 @@ const unfinishedProjects: TProject[] = [
     name: "Create simple Factorio/Mindustry clone",
     description: "Would like to incorporate recursion into the game.",
   },
-  {
-    name: "🚀🚀",
-    description: "",
-  },
 ];
 
 export default Projects;
