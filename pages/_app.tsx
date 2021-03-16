@@ -13,10 +13,17 @@ const GlobalStyle = createGlobalStyle`
     align-items: stretch;
   }
 
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
   ${({ theme }) => css`
     body {
       background-color: ${theme.colors.background};
       color: ${theme.colors.text};
+
+      margin: ${theme.spacing(1)}px ${theme.spacing(1)}px;
 
       font-family: "Montserrat", sans-serif;
       font-weight: 500;

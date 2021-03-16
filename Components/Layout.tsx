@@ -24,9 +24,11 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   flex-grow: 1;
+  box-sizing: border-box;
 
   ${({ theme }) => css`
     max-width: ${theme.maxPageWidth}px;
+    padding: 0 ${theme.spacing(1)}px;
     border-bottom: ${theme.colors.backgroundContrast} solid 1px;
   `}
 `;
@@ -35,7 +37,7 @@ const Logo = styled.a`
   ${({ theme }) => css`
     font-size: ${theme.sizes.logo};
     color: ${theme.colors.text};
-    padding: ${theme.spacing(1)}px ${theme.spacing(2)}px;
+    padding: ${theme.spacing(1)}px;
   `}
 `;
 
@@ -51,15 +53,16 @@ const SiteContent = styled.main`
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  margin: ${({ theme }) => `${theme.spacing(10)}px ${theme.spacing(2)}px`};
+  margin: ${({ theme }) => `${theme.spacing(5)}px 0`};
 `;
 
 const SiteContentContainer = styled.div`
   flex-grow: 1;
+  box-sizing: border-box;
 
   ${({ theme }) => css`
     max-width: ${theme.maxPageWidth}px;
-    padding: ${theme.spacing(2)}px ${theme.spacing(1)}px;
+    padding: ${theme.spacing(2)}px;
   `}
 `;
 
