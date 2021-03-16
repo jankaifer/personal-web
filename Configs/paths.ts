@@ -3,19 +3,11 @@ export const tabs: {
   path: string;
 }[] = [
   {
-    name: "About",
+    name: "Home",
     path: "/",
   },
   {
-    name: "My projects",
+    name: "Projects",
     path: "/projects",
-  },
-  {
-    name: "Todo list",
-    path: "/todo-list",
-  },
-  {
-    name: "Links",
-    path: "/links",
   },
 ];
