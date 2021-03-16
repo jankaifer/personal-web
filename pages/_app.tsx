@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
       background-color: ${theme.colors.background};
       color: ${theme.colors.text};
 
-      margin: ${theme.spacing(1)}px ${theme.spacing(1)}px;
+      margin: ${theme.spacing(1)}px ${theme.spacing(2)}px;
 
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
