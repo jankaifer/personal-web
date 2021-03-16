@@ -93,7 +93,7 @@ const ProjectContainer = styled.div`
   ${({ theme }) => css`
     margin: ${theme.spacing(2)}px ${theme.spacing(1)}px;
 
-    h4 {
+    h3 {
       margin: 0;
     }
 
@@ -109,7 +109,7 @@ const ProjectContainer = styled.div`
 
 const Project = ({ project }: { project: TProject }) => (
   <ProjectContainer>
-    <h4>
+    <h3>
       {project.url !== undefined ? (
         <a href={project.url}>{project.name}</a>
       ) : (
@@ -122,7 +122,7 @@ const Project = ({ project }: { project: TProject }) => (
           </a>
         </>
       )}
-    </h4>
+    </h3>
     <p>{project.description}</p>
   </ProjectContainer>
 );
@@ -133,11 +133,11 @@ const Projects = () => {
       <Markdown>{markdown}</Markdown>
       <h2>On my TODO list</h2>
       {unfinishedProjects.map((project) => (
-        <Project project={project} />
+        <Project project={project} key={project.name} />
       ))}
       <h2>Awesome companies I worked in</h2>
       {companies.map((project) => (
-        <Project project={project} />
+        <Project project={project} key={project.name} />
       ))}
       <h2>Finished Projects</h2>
       {finishedProjects
@@ -146,7 +146,7 @@ const Projects = () => {
           return getKey(p1) - getKey(p2);
         })
         .map((project) => (
-          <Project project={project} />
+          <Project project={project} key={project.name} />
         ))}
     </Layout>
   );
