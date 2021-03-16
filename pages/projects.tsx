@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <Layout title="Projects">
       <Markdown>{markdown}</Markdown>
-      <h2>On my TODO list</h2>
+      <h2>TODO list</h2>
       {unfinishedProjects.map((project) => (
         <Project project={project} key={project.name} />
       ))}
