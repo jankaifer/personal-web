@@ -1,6 +1,4 @@
-# Welcome stranger
-
-Hope you find what you are looking for.
+# Welcome 
 
 Info here can be outdated and source code is available on [GitLab](https://gitlab.com/JanKaifer/personal-web).
 
