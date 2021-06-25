@@ -19,7 +19,7 @@ export type TProject = {
   description: string;
   tags: TTag[];
   finished: boolean;
-  year?: number;
+  year: number;
   url?: string;
   sourceUrl?: string;
   company?: TCompanyName;
@@ -84,7 +84,8 @@ export const projects: TProject[] = [
   },
   {
     name: "My website v1",
-    description: "My first website, built with Svelte. Svelte is cool.",
+    description:
+      "My first personal website, built with Svelte. Svelte is cool.",
     tags: ["Web app", "Svelte"],
     finished: true,
     year: 2020,
@@ -92,7 +93,8 @@ export const projects: TProject[] = [
   },
   {
     name: "This web",
-    description: "This web I built on next.js",
+    description:
+      "This web I built with next.js. Most of the content is written in config files or markdown and Next.js statically renders everything. It's like Jekyll, but with all superpowers of react.",
     tags: ["Web app", "React"],
     finished: true,
     year: 2021,
@@ -124,6 +126,7 @@ export const projects: TProject[] = [
     description: "Transpiler from higher language to Mindustry logic.",
     tags: [],
     finished: false,
+    year: 2021,
   },
   {
     name: "Learn Rust",
@@ -131,12 +134,14 @@ export const projects: TProject[] = [
       "Would like to create something in Rust because Rust is awesome.",
     tags: [],
     finished: false,
+    year: 2021,
   },
   {
     name: "Learn Go",
     description: "Go rocks.",
     tags: [],
     finished: false,
+    year: 2021,
   },
   {
     name: "Factorio like graphical programming language",
@@ -144,6 +149,16 @@ export const projects: TProject[] = [
       "I think that Factorio like factory can be used to create simple functional programs.",
     tags: [],
     finished: false,
+    year: 2021,
+  },
+  {
+    name: "Netrex mobile app",
+    description:
+      "Mobile app for [Netrex](https://www.netrex.com) in React Native. Android & iOS app that can live stream video from IP cameras. We had to create our custom video player and protocol to achieve best possible performance.",
+    year: 2021,
+    finished: true,
+    tags: ["Mobile app", "React Native"],
+    url: "https://play.google.com/store/apps/details?id=cz.netrex.netrexmobile",
   },
 ];
 

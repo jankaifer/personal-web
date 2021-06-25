@@ -13,6 +13,8 @@ class Sizes {
   readonly logo = "2em";
 
   readonly h1 = "2em";
+  readonly medium = "1em";
+  readonly small = ".75em";
 }
 
 class Theme {

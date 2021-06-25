@@ -7,37 +7,61 @@ type Props = { project: TProject };
 
 const ProjectCard = ({ project }: Props) => (
   <ProjectContainer>
-    <h3>
+    <ProjectHeader>
       {project.url !== undefined ? (
         <a href={project.url}>{project.name}</a>
       ) : (
         project.name
       )}
       {project.sourceUrl !== undefined && (
-        <>
-          <a className="source-code" href={project.sourceUrl}>
-            [Source code]
-          </a>
-        </>
+        <a className="source-code" href={project.sourceUrl}>
+          [Source code]
+        </a>
       )}
-    </h3>
+    </ProjectHeader>
+    <ProjectTagsWrapper>
+      {project.tags.map((tag) => (
+        <ProjectTag>{tag}</ProjectTag>
+      ))}
+    </ProjectTagsWrapper>
     <Markdown>{project.description}</Markdown>
   </ProjectContainer>
 );
 
-const ProjectContainer = styled.div`
-  ${({ theme }) => css`
-    margin: ${theme.spacing(2)}px ${theme.spacing(1)}px;
+const ProjectTagsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
-    h3 {
-      margin: 0;
-    }
+const ProjectTag = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacing(1)}px;
+    padding-bottom: 0;
+    color: ${theme.colors.secondaryText};
+    font-size: ${theme.sizes.small};
+  `}
+`;
+
+const ProjectContainer = styled.div`
+  &:first-child {
+    margin-top: 0;
+  }
+
+  ${({ theme }) => css`
+    margin-top: ${theme.spacing(3)}px;
+    margin-left: ${theme.spacing(1)}px;
 
     p {
       margin: ${theme.spacing(1)}px;
     }
+  `};
+`;
 
-    a.source-code {
+const ProjectHeader = styled.h3`
+  margin: 0;
+
+  ${({ theme }) => css`
+    & > .source-code {
       margin-left: ${theme.spacing(2)}px;
     }
   `}
