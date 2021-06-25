@@ -1,6 +1,7 @@
-import { TProject } from "Configs/projects";
-import Markdown from "Components/Markdown";
 import styled, { css } from "styled-components";
+
+import Markdown from "Components/Markdown";
+import { TProject } from "Configs/projects";
 
 type Props = { project: TProject };
 

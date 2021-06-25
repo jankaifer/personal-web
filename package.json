@@ -21,7 +21,6 @@
     "styled-components": "^5"
   },
   "dependencies": {
-    "darkreader": "^4.9.33",
     "dayjs": "^1.9.6",
     "file-loader": "^6.2.0",
     "fp-ts": "^2.8.6",

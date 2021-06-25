@@ -1,9 +1,10 @@
+import styled, { css } from "styled-components";
+
 import Layout from "Components/Layout";
 import Markdown from "Components/Markdown";
 import ProjectList from "Components/Projects/ProjectList";
 import { companies, projects, TProject } from "Configs/projects";
 import markdown from "Docs/projects.md";
-import styled, { css } from "styled-components";
 
 const Projects = () => {
   return (

@@ -1,4 +1,5 @@
 import { TProject } from "Configs/projects";
+
 import ProjectCard from "./ProjectCard";
 
 type Props = {
