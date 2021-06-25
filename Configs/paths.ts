@@ -10,4 +10,8 @@ export const tabs: {
     name: "Projects",
     path: "/projects",
   },
+  {
+    name: "TODO list",
+    path: "/todo-list",
+  },
 ];

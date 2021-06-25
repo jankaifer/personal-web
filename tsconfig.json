@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -17,14 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "downlevelIteration": true
   },
-  "include": [
-    "@types/**/*.d.ts",
-    "**/*.ts",
-    "**/*.tsx", "next.config.js"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["@types/**/*.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
+  "exclude": ["node_modules"]
 }

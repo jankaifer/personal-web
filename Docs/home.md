@@ -1,10 +1,4 @@
-# Welcome 
+## About me
+My name is Jan Kaifer. I am a student, programmer, learner, and gamer.
 
-Info here can be outdated and source code is available on [GitLab](https://gitlab.com/JanKaifer/personal-web).
-
-<br/>
-<br/>
-
-#### Get in touch
-My mail: [jan@kaifer.cz](mailto:jan@kaifer.cz)
-
+Interesting projects and ideas are always welcome. Drop me a message at [jan@kaifer.cz](mailto:jan@kaifer.cz).

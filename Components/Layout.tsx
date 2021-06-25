@@ -53,7 +53,7 @@ const SiteContent = styled.main`
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  margin: ${({ theme }) => `${theme.spacing(5)}px 0`};
+  margin: ${({ theme }) => theme.spacing(2)}px 0;
 `;
 
 const SiteContentContainer = styled.div`
