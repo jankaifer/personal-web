@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppProps } from "next/app";
 import { createGlobalStyle, css, ThemeProvider } from "styled-components";
 
 import Theme from "Themes/Theme";
+import DarkReader from "darkreader";
 
 const GlobalStyle = createGlobalStyle`
   html, body, body > div {
@@ -47,6 +48,10 @@ const GlobalStyle = createGlobalStyle`
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme] = useState(() => new Theme());
+
+  useEffect(() => {
+    DarkReader.disable();
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

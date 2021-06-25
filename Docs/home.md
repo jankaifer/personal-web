@@ -1,4 +1,4 @@
-# Welcome 
+# Welcome
 
 Info here can be outdated and source code is available on [GitLab](https://gitlab.com/JanKaifer/personal-web).
 
@@ -6,5 +6,5 @@ Info here can be outdated and source code is available on [GitLab](https://gitla
 <br/>
 
 #### Get in touch
-My mail: [jan@kaifer.cz](mailto:jan@kaifer.cz)
 
+My mail: [jan@kaifer.cz](mailto:jan@kaifer.cz)

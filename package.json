@@ -7,10 +7,21 @@
     "build": "next build",
     "start": "next start"
   },
+  "importSort": {
+    ".js, .jsx": {
+      "parser": "babylon",
+      "style": "capital"
+    },
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "capital"
+    }
+  },
   "resolutions": {
     "styled-components": "^5"
   },
   "dependencies": {
+    "darkreader": "^4.9.33",
     "dayjs": "^1.9.6",
     "file-loader": "^6.2.0",
     "fp-ts": "^2.8.6",
@@ -28,6 +39,9 @@
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.4",
     "babel-plugin-styled-components": "^1.12.0",
+    "import-sort-style-capital": "^1.0.1",
+    "prettier": "^2.3.1",
+    "prettier-plugin-import-sort": "^0.0.7",
     "sass": "^1.29.0",
     "typescript": "^4.1.2"
   }
