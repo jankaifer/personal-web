@@ -8,6 +8,7 @@ export const tags = [
   "Web app",
   "Full Stack",
   "Django",
+  "Work In Progress",
 ] as const;
 export const companyNames = ["Netrex", "Camstreamer", "Retino"] as const;
 
@@ -132,7 +133,7 @@ export const projects: TProject[] = [
     name: "Learn Rust",
     description:
       "Would like to create something in Rust because Rust is awesome.",
-    tags: [],
+    tags: ["Work In Progress"],
     finished: false,
     year: 2021,
   },
@@ -154,11 +155,12 @@ export const projects: TProject[] = [
   {
     name: "Netrex mobile app",
     description:
-      "Mobile app for [Netrex](https://www.netrex.com) in React Native. Android & iOS app that can live stream video from IP cameras. We had to create our custom video player and protocol to achieve best possible performance.",
+      "Mobile app for [Netrex](https://www.netrex.cz/en/) in React Native. Android & iOS app that can live stream video from IP cameras. We had to create our custom video player and protocol to achieve the best possible performance.",
     year: 2021,
     finished: true,
-    tags: ["Mobile app", "React Native"],
+    tags: ["Mobile app", "React Native", "Work In Progress"],
     url: "https://play.google.com/store/apps/details?id=cz.netrex.netrexmobile",
+    company: "Netrex",
   },
 ];
 
