@@ -31,14 +31,20 @@ const ProjectCard = ({ project }: Props) => (
 const ProjectTagsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const ProjectTag = styled.div`
   ${({ theme }) => css`
-    padding: ${theme.spacing(1)}px;
-    padding-bottom: 0;
+    padding: 0 ${theme.spacing(1)}px;
+    margin-top: ${theme.spacing(1)}px;
     color: ${theme.colors.secondaryText};
     font-size: ${theme.sizes.small};
+    border-right: 1px solid ${theme.colors.secondaryText};
+
+    &:last-child {
+      border-right: 0;
+    }
   `}
 `;
 
