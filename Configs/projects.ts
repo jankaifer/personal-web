@@ -162,6 +162,13 @@ export const projects: TProject[] = [
     url: "https://play.google.com/store/apps/details?id=cz.netrex.netrexmobile",
     company: "Netrex",
   },
+  {
+    name: "Learn TDD",
+    description: "Trying to get into Test Driven Development.",
+    finished: false,
+    tags: ["Work In Progress"],
+    year: 2021,
+  },
 ];
 
 export const companiesByName = transformArrayToObjectByField(companies, "name");
