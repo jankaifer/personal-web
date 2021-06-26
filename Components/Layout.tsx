@@ -125,16 +125,18 @@ const Layout = ({ children, home = false, title }: Props) => {
       <RootDiv>
         <Header>
           <HeaderContent>
-            <Logo href="/">
-              <LogoName>{values.name}</LogoName>
-              <LogoRest>'s web</LogoRest>
-            </Logo>
+            <Link href="/">
+              <Logo href="/">
+                <LogoName>{values.name}</LogoName>
+                <LogoRest>'s web</LogoRest>
+              </Logo>
+            </Link>
             <Nav>
               <NavList>
                 {tabs.map(({ name, path }) => (
                   <NavItem key={path}>
                     <Link href={path}>
-                      <NavLink>
+                      <NavLink href={path}>
                         <span>{name}</span>
                       </NavLink>
                     </Link>
