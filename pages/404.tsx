@@ -12,9 +12,13 @@ const XKCDLinkWrapper = styled.div`
   flex-direction: row;
 `;
 
+const meta: TMeta = {
+  title: "Not Found",
+};
+
 const Error404 = () => {
   return (
-    <Layout title="Not found">
+    <Layout meta={meta}>
       <H1>Content is not available in your country</H1>
       <XKCDLinkWrapper>
         <a href="https://xkcd.com/1969/">
