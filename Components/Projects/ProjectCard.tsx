@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import Markdown from "Components/Markdown";
-import { TProject } from "Configs/projects";
+import { tags, TProject } from "Configs/projects";
 
 type Props = { project: TProject };
 
@@ -20,9 +20,11 @@ const ProjectCard = ({ project }: Props) => (
       )}
     </ProjectHeader>
     <ProjectTagsWrapper>
-      {project.tags.map((tag) => (
-        <ProjectTag>{tag}</ProjectTag>
-      ))}
+      {project.tags
+        .sort((t1, t2) => tags.indexOf(t1) - tags.indexOf(t2))
+        .map((tag) => (
+          <ProjectTag>{tag}</ProjectTag>
+        ))}
     </ProjectTagsWrapper>
     <Markdown>{project.description}</Markdown>
   </ProjectContainer>

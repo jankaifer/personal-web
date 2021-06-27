@@ -1,14 +1,19 @@
 import { transformArrayToObjectByField } from "Utils/misc";
 
 export const tags = [
+  // Framework
   "React",
   "React Native",
   "Svelte",
+  "Django",
+  "Firebase",
+  "Rust",
+  "Go",
+  // Type
   "Mobile app",
   "Web app",
-  "Full Stack",
-  "Django",
-  "Work In Progress",
+  "Backend",
+  "Skill",
 ] as const;
 export const companyNames = ["Netrex", "Camstreamer", "Retino"] as const;
 
@@ -21,6 +26,7 @@ export type TProject = {
   tags: TTag[];
   finished: boolean;
   year: number;
+  active?: boolean;
   url?: string;
   sourceUrl?: string;
   company?: TCompanyName;
@@ -58,7 +64,7 @@ export const projects: TProject[] = [
     Won multiple awards.
     Created with my friends [Tom](http://www.tomvrbovsky.com/) and [Andrew](https://www.gonzor.cz/).
     `,
-    tags: ["Web app", "React"],
+    tags: ["Web app", "React", "Backend", "Django"],
     finished: true,
     year: 2019,
     url: "https://pochopimto.cz",
@@ -78,7 +84,7 @@ export const projects: TProject[] = [
     name: "Estaj.cz",
     description:
       "PWA app for stables. Helps owners and stable workers to better communicate changes in horse diet etc.",
-    tags: ["Web app", "React"],
+    tags: ["Backend", "Web app", "React", "Firebase"],
     finished: true,
     year: 2020,
     url: "https://estaj.cz",
@@ -99,6 +105,7 @@ export const projects: TProject[] = [
     tags: ["Web app", "React"],
     finished: true,
     year: 2021,
+    active: true,
     url: "https://v2.web.kaifer.cz/",
     sourceUrl: "https://gitlab.com/JanKaifer/personal-web/",
   },
@@ -106,7 +113,7 @@ export const projects: TProject[] = [
     name: "Alley tester",
     description:
       "React + Django app that my mum uses to generate tests for her students. It creates unique questions for each student based on defined rules / custom JS code.",
-    tags: ["Web app", "React", "Full Stack", "Django"],
+    tags: ["Web app", "React", "Backend", "Django"],
     finished: true,
     year: 2021,
     url: "https://alley-tester.kaifer.cz/",
@@ -123,24 +130,17 @@ export const projects: TProject[] = [
     sourceUrl: "https://gitlab.com/JanKaifer/mlog-simulator/",
   },
   {
-    name: "Compiler for Mindustry logic",
-    description: "Transpiler from higher language to Mindustry logic.",
-    tags: [],
-    finished: false,
-    year: 2021,
-  },
-  {
     name: "Learn Rust",
     description:
       "Would like to create something in Rust because Rust is awesome.",
-    tags: ["Work In Progress"],
+    tags: ["Rust", "Skill"],
     finished: false,
     year: 2021,
   },
   {
     name: "Learn Go",
     description: "Go rocks.",
-    tags: [],
+    tags: ["Go", "Skill"],
     finished: false,
     year: 2021,
   },
@@ -158,7 +158,8 @@ export const projects: TProject[] = [
       "Mobile app for [Netrex](https://www.netrex.cz/en/) in React Native. Android & iOS app that can live stream video from IP cameras. We had to create our custom video player and protocol to achieve the best possible performance.",
     year: 2021,
     finished: true,
-    tags: ["Mobile app", "React Native", "Work In Progress"],
+    active: true,
+    tags: ["Mobile app", "React Native"],
     url: "https://play.google.com/store/apps/details?id=cz.netrex.netrexmobile",
     company: "Netrex",
   },
@@ -166,7 +167,7 @@ export const projects: TProject[] = [
     name: "Learn TDD",
     description: "Trying to get into Test Driven Development.",
     finished: false,
-    tags: ["Work In Progress"],
+    tags: ["Skill"],
     year: 2021,
   },
 ];

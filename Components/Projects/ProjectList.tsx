@@ -9,15 +9,23 @@ type Props = {
 };
 
 const ProjectList = ({ projects }: Props) => {
-  const years = [...new Set(projects.map((p) => p.year))].sort().reverse();
+  const active = projects.filter((p) => p.active);
+  const notActive = projects.filter((p) => !p.active);
+  const years = [...new Set(notActive.map((p) => p.year))].sort().reverse();
 
   return (
     <div>
+      {active.length > 0 && (
+        <ProjectGroup
+          groupName={"Active"}
+          projects={active.sort((p1, p2) => (p1.name > p2.name ? 1 : -1))}
+        />
+      )}
       {years.map((year) => (
         <ProjectGroup
           key={year}
-          year={year}
-          projects={projects
+          groupName={String(year)}
+          projects={notActive
             .filter((p) => p.year === year)
             .sort((p1, p2) => (p1.name > p2.name ? 1 : -1))}
         />
@@ -28,14 +36,14 @@ const ProjectList = ({ projects }: Props) => {
 
 const ProjectGroup = ({
   projects,
-  year,
+  groupName,
 }: {
   projects: TProject[];
-  year: number;
+  groupName: string;
 }) => (
   <ProjectGroupWrapper>
     <ProjectGroupTimelineWrapper>
-      <div className="year">{year}</div>
+      <div className="tag">{groupName}</div>
     </ProjectGroupTimelineWrapper>
     <ProjectGroupProjectsWrapper>
       {projects.map((project) => (
@@ -47,18 +55,40 @@ const ProjectGroup = ({
 
 const ProjectGroupWrapper = styled.div`
   display: flex;
-  flex-direction: "row";
 
   ${({ theme }) => css`
     margin-top: ${theme.spacing(4)}px;
+
+    ${theme.breakpoints.onBreakpoint(
+      "sm",
+      css`
+        flex-direction: column;
+      `,
+      css`
+        flex-direction: row;
+      `
+    )}
   `}
 `;
 
 const ProjectGroupTimelineWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+
   ${({ theme }) => css`
-    & > .year {
+    & > .tag {
       color: ${theme.colors.secondaryText};
-      padding-right: ${theme.spacing(2)}px;
+      margin: 0 ${theme.spacing(2)}px;
+      margin-bottom: ${theme.spacing(4)}px;
+
+      width: 100px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid ${theme.colors.secondaryText};
+      border-left: none;
+      border-right: none;
     }
   `}
 `;
