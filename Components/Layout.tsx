@@ -10,7 +10,12 @@ type Props = {
   meta: TMeta;
 };
 
-const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
+const Layout = ({
+  children,
+  meta: { isHome = false, title, layoutType = "normal" },
+}: Props) => {
+  const isBlogPost = layoutType === "blogPost";
+
   return (
     <>
       <Head>
@@ -43,7 +48,10 @@ const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
           </HeaderContent>
         </Header>
         <SiteContent>
-          <SiteContentContainer>{children}</SiteContentContainer>
+          <SiteContentContainer>
+            {isBlogPost && <h1>{title}</h1>}
+            {children}
+          </SiteContentContainer>
         </SiteContent>
         <Footer>
           <FooterContent>

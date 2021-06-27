@@ -15,7 +15,9 @@ class Sizes {
   readonly logo = "2em";
 
   readonly h1 = "2em";
-  readonly medium = "1em";
+  readonly h2 = "1.75em";
+  readonly h3 = "1.4em";
+  readonly medium = "1.25em";
   readonly small = ".75em";
 }
 

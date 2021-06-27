@@ -7,6 +7,10 @@ export const tabs: {
     path: "/",
   },
   {
+    name: "Blog",
+    path: "/blog",
+  },
+  {
     name: "Projects",
     path: "/projects",
   },

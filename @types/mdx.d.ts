@@ -7,6 +7,7 @@ declare module "@mdx-js/react" {
 declare type TMeta = {
   title: string;
   isHome?: boolean;
+  layoutType?: "normal" | "blogPost";
 };
 
 declare module "*.mdx" {

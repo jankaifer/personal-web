@@ -13,12 +13,12 @@ const ProjectCard = ({ project }: Props) => (
       ) : (
         project.name
       )}
-      {project.sourceUrl !== undefined && (
-        <a className="source-code" href={project.sourceUrl}>
-          [Source code]
-        </a>
-      )}
     </ProjectHeader>
+    {project.sourceUrl !== undefined && (
+      <a className="source-code" href={project.sourceUrl}>
+        [Source code]
+      </a>
+    )}
     <ProjectTagsWrapper>
       {project.tags
         .sort((t1, t2) => tags.indexOf(t1) - tags.indexOf(t2))
