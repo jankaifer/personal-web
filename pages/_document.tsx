@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="Jan Kaifer's personal website." />
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
             rel="stylesheet"
           ></link>
         </Head>

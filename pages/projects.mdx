@@ -1,5 +1,5 @@
 import ProjectList from "Components/Projects/ProjectList";
-import { projects } from "Configs/projects";
+import config from "Config";
 
 export const meta = {
   title: "Projects",
@@ -7,7 +7,4 @@ export const meta = {
 
 # My Projects
 
-Projects that I have completed. Most of them are open-sourced on GitLab.
-I do not actively maintain most of them, but PRs are always welcome.
-
-<ProjectList projects={projects.filter((p) => p.finished)} />
+<ProjectList projects={config.projects.filter((p) => p.finished)} />

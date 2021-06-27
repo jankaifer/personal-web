@@ -1,5 +1,5 @@
 import ProjectList from "Components/Projects/ProjectList";
-import { projects } from "Configs/projects";
+import config from "Config";
 
 export const meta = {
   title: "TODO list",
@@ -10,4 +10,4 @@ export const meta = {
 Things I want to learn, try, or just stuff that I find interesting.
 I would love to cooperate on any of these projects, so drop me an email if you would like to team up.
 
-<ProjectList projects={projects.filter((p) => !p.finished)} />
+<ProjectList projects={config.projects.filter((p) => !p.finished)} />

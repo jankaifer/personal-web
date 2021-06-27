@@ -2,20 +2,24 @@ import Head from "next/head";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
-import { tabs } from "Configs/paths";
-import values from "Configs/values";
+import config from "Config";
 
 type Props = {
   children: React.ReactNode;
   meta: TMeta;
 };
 
-const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
+const Layout = ({
+  children,
+  meta: { isHome = false, title, layoutType = "normal" },
+}: Props) => {
+  const isBlogPost = layoutType === "blogPost";
+
   return (
     <>
       <Head>
         <title>
-          {values.name} - {title}
+          {config.values.name} - {title}
         </title>
       </Head>
       <RootDiv>
@@ -23,13 +27,13 @@ const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
           <HeaderContent>
             <Link href="/">
               <Logo href="/">
-                <LogoName>{values.name}</LogoName>
+                <LogoName>{config.values.name}</LogoName>
                 <LogoRest>'s web</LogoRest>
               </Logo>
             </Link>
             <Nav>
               <NavList>
-                {tabs.map(({ name, path }) => (
+                {config.tabs.map(({ name, path }) => (
                   <NavItem key={path}>
                     <Link href={path}>
                       <NavLink href={path}>
@@ -43,7 +47,10 @@ const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
           </HeaderContent>
         </Header>
         <SiteContent>
-          <SiteContentContainer>{children}</SiteContentContainer>
+          <SiteContentContainer>
+            {isBlogPost && <h1>{title}</h1>}
+            {children}
+          </SiteContentContainer>
         </SiteContent>
         <Footer>
           <FooterContent>

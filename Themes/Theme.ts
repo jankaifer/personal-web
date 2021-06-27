@@ -15,7 +15,9 @@ class Sizes {
   readonly logo = "2em";
 
   readonly h1 = "2em";
-  readonly medium = "1em";
+  readonly h2 = "1.75em";
+  readonly h3 = "1.4em";
+  readonly medium = "1.25em";
   readonly small = ".75em";
 }
 
@@ -40,10 +42,26 @@ class Breakpoints {
   `;
 }
 
+class CssUtils {
+  readonly darkScrollbar = css`
+    ${({ theme }) => css`
+      &::-webkit-scrollbar {
+        background-color: none;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: ${theme.colors.secondaryText};
+      }
+    `}
+  `;
+}
+
 class Theme {
   readonly colors = new Colors();
   readonly sizes = new Sizes();
   readonly breakpoints = new Breakpoints();
+  readonly cssUtils = new CssUtils();
 
   private readonly spacingConstant = 8;
 
