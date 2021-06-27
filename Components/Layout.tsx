@@ -6,7 +6,7 @@ import config from "Config";
 
 type Props = {
   children: React.ReactNode;
-  meta: TMeta;
+  meta: Pick<TMeta, "isHome" | "layoutType" | "title">;
 };
 
 const Layout = ({
