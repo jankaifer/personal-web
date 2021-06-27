@@ -16,6 +16,12 @@
     "baseUrl": ".",
     "downlevelIteration": true
   },
-  "include": ["@types/**/*.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
+  "include": [
+    "@types/**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mdx",
+    "next.config.js"
+  ],
   "exclude": ["node_modules"]
 }

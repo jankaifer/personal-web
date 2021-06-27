@@ -5,6 +5,60 @@ import styled, { css } from "styled-components";
 import { tabs } from "Configs/paths";
 import values from "Configs/values";
 
+type Props = {
+  children: React.ReactNode;
+  meta: TMeta;
+};
+
+const Layout = ({ children, meta: { isHome = false, title } }: Props) => {
+  return (
+    <>
+      <Head>
+        <title>
+          {values.name} - {title}
+        </title>
+      </Head>
+      <RootDiv>
+        <Header>
+          <HeaderContent>
+            <Link href="/">
+              <Logo href="/">
+                <LogoName>{values.name}</LogoName>
+                <LogoRest>'s web</LogoRest>
+              </Logo>
+            </Link>
+            <Nav>
+              <NavList>
+                {tabs.map(({ name, path }) => (
+                  <NavItem key={path}>
+                    <Link href={path}>
+                      <NavLink href={path}>
+                        <span>{name}</span>
+                      </NavLink>
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavList>
+            </Nav>
+          </HeaderContent>
+        </Header>
+        <SiteContent>
+          <SiteContentContainer>{children}</SiteContentContainer>
+        </SiteContent>
+        <Footer>
+          <FooterContent>
+            {!isHome && (
+              <Link href="/">
+                <a href="/">&larr; Go back home</a>
+              </Link>
+            )}
+          </FooterContent>
+        </Footer>
+      </RootDiv>
+    </>
+  );
+};
+
 const RootDiv = styled.div`
   width: 100%;
   flex-grow: 1;
@@ -107,60 +161,5 @@ const NavLink = styled.a`
     padding: ${theme.spacing(2)}px ${theme.spacing(1)}px;
   `}
 `;
-
-type Props = {
-  children: React.ReactNode;
-  title: string;
-  home?: boolean;
-};
-
-const Layout = ({ children, home = false, title }: Props) => {
-  return (
-    <>
-      <Head>
-        <title>
-          {values.name} - {title}
-        </title>
-      </Head>
-      <RootDiv>
-        <Header>
-          <HeaderContent>
-            <Link href="/">
-              <Logo href="/">
-                <LogoName>{values.name}</LogoName>
-                <LogoRest>'s web</LogoRest>
-              </Logo>
-            </Link>
-            <Nav>
-              <NavList>
-                {tabs.map(({ name, path }) => (
-                  <NavItem key={path}>
-                    <Link href={path}>
-                      <NavLink href={path}>
-                        <span>{name}</span>
-                      </NavLink>
-                    </Link>
-                  </NavItem>
-                ))}
-              </NavList>
-            </Nav>
-          </HeaderContent>
-        </Header>
-        <SiteContent>
-          <SiteContentContainer>{children}</SiteContentContainer>
-        </SiteContent>
-        <Footer>
-          <FooterContent>
-            {!home && (
-              <Link href="/">
-                <a>&larr; Go back home</a>
-              </Link>
-            )}
-          </FooterContent>
-        </Footer>
-      </RootDiv>
-    </>
-  );
-};
 
 export default Layout;

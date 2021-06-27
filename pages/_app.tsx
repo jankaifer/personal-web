@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
 import { AppProps } from "next/app";
 import { createGlobalStyle, css, ThemeProvider } from "styled-components";
 
+import Layout from "Components/Layout";
 import Theme from "Themes/Theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -45,13 +47,20 @@ const GlobalStyle = createGlobalStyle`
   `}
 `;
 
+const components = {
+  wrapper: (props: React.ComponentProps<typeof Layout>) =>
+    props.meta === undefined ? <>{props.children}</> : <Layout {...props} />,
+};
+
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme] = useState(() => new Theme());
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <MDXProvider components={components}>
+        <Component {...pageProps} />
+      </MDXProvider>
     </ThemeProvider>
   );
 };
