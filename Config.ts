@@ -8,10 +8,10 @@ const tabs: {
     name: "Home",
     path: "/",
   },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   name: "Blog",
+  //   path: "/blog",
+  // },
   {
     name: "Projects",
     path: "/projects",
@@ -67,14 +67,14 @@ const companies: TCompany[] = [
 const projects: TProject[] = [
   {
     name: "Pochopím to",
-    description: `Simple web app that allows teachers to get instant feedback from students.
+    description: `My first app that allows teachers to get instant feedback from students.
     Won multiple awards.
-    Created with my friends [Tom](http://www.tomvrbovsky.com/) and [Andrew](https://www.gonzor.cz/).
+    Designed by [Tom](http://www.tomvrbovsky.com/) and business things managed by [Andrew](https://www.gonzor.cz/).
     `,
     tags: ["Web app", "React", "Backend", "Django"],
     finished: true,
     year: 2019,
-    url: "https://pochopimto.cz",
+    url: "https://www.facebook.com/pochopim.to/",
     sourceUrl: "https://gitlab.com/pochopimto/pcht",
   },
   {

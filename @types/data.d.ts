@@ -1,7 +1,8 @@
 declare type TMeta = {
   title: string;
+  description: string;
+  date: string;
   isHome?: boolean;
-  date?: string;
   layoutType?: "normal" | "blogPost";
 };
 
@@ -29,12 +30,14 @@ declare type TCompany = {
 declare type TPost = {
   tag: string;
   title: string;
+  description: string;
   date: string;
 };
 
 declare type TCard = {
   title: string;
-  date?: string;
+  date: string;
+  pinned?: boolean;
   url?: string;
   sourceUrl?: string;
   markdownDescription?: string;

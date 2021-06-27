@@ -28,7 +28,9 @@ const Card = ({
         </a>
       </Link>
     )}
-    {date !== undefined && <DateWrapper>{date}</DateWrapper>}
+    {date !== undefined && date.includes("/") && (
+      <DateWrapper>{date}</DateWrapper>
+    )}
     {tags !== undefined && (
       <TagsWrapper>
         {tags.map((tag) => (

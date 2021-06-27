@@ -42,10 +42,26 @@ class Breakpoints {
   `;
 }
 
+class CssUtils {
+  readonly darkScrollbar = css`
+    ${({ theme }) => css`
+      &::-webkit-scrollbar {
+        background-color: none;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: ${theme.colors.secondaryText};
+      }
+    `}
+  `;
+}
+
 class Theme {
   readonly colors = new Colors();
   readonly sizes = new Sizes();
   readonly breakpoints = new Breakpoints();
+  readonly cssUtils = new CssUtils();
 
   private readonly spacingConstant = 8;
 

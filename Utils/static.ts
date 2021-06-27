@@ -1,13 +1,14 @@
 import config from "Config";
 
-const loadBlog = (blogTag: string) => {
+const loadBlog = (blogTag: string): TPost => {
   const importedData = require(`../${config.postBasePath}/${blogTag}.mdx`);
   const meta = importedData.meta as TMeta;
 
   return {
     tag: blogTag,
     title: meta.title,
-    date: meta.date ?? null,
+    date: meta.date,
+    description: meta.description,
   };
 };
 

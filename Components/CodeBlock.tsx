@@ -44,18 +44,12 @@ const Pre = styled.pre`
   flex-direction: column;
   align-items: flex-start;
 
-  &::-webkit-scrollbar {
-    background-color: none;
-    height: 8px;
-  }
+  ${({ theme }) =>
+    css`
+      padding: ${theme.spacing(2)}px ${theme.spacing(4)}px;
 
-  ${({ theme }) => css`
-    padding: ${theme.spacing(2)}px ${theme.spacing(4)}px;
-
-    &::-webkit-scrollbar-thumb {
-      background-color: ${theme.colors.secondaryText};
-    }
-  `}
+      ${theme.cssUtils.darkScrollbar}
+    `}
 `;
 const Line = styled.div``;
 const Token = styled.span``;

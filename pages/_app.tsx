@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ${({ theme }) => css`
+    html {
+      ${theme.cssUtils.darkScrollbar}
+    }
+
     body {
       background-color: ${theme.colors.background};
       color: ${theme.colors.text};
