@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled, { css } from "styled-components";
 
-import values from "Configs/values";
+import config from "Config";
 import { getGravatarSrc } from "Utils/misc";
 
 type Props = {
@@ -15,7 +15,7 @@ const MyAvatar = ({ size, round = false, css = "" }: Props) => (
   <StyledImage
     $round={round}
     $css={css}
-    src={getGravatarSrc({ email: values.email, size: size * 2 })}
+    src={getGravatarSrc({ email: config.values.email, size: size * 2 })}
     width={size}
     height={size}
   />

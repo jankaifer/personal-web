@@ -4,12 +4,6 @@ declare module "@mdx-js/react" {
   export const MDXProvider: any;
 }
 
-declare type TMeta = {
-  title: string;
-  isHome?: boolean;
-  layoutType?: "normal" | "blogPost";
-};
-
 declare module "*.mdx" {
   export const meta: TMeta;
   const Component: () => JSX.Element;

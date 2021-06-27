@@ -2,8 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
-import { tabs } from "Configs/paths";
-import values from "Configs/values";
+import config from "Config";
 
 type Props = {
   children: React.ReactNode;
@@ -20,7 +19,7 @@ const Layout = ({
     <>
       <Head>
         <title>
-          {values.name} - {title}
+          {config.values.name} - {title}
         </title>
       </Head>
       <RootDiv>
@@ -28,13 +27,13 @@ const Layout = ({
           <HeaderContent>
             <Link href="/">
               <Logo href="/">
-                <LogoName>{values.name}</LogoName>
+                <LogoName>{config.values.name}</LogoName>
                 <LogoRest>'s web</LogoRest>
               </Logo>
             </Link>
             <Nav>
               <NavList>
-                {tabs.map(({ name, path }) => (
+                {config.tabs.map(({ name, path }) => (
                   <NavItem key={path}>
                     <Link href={path}>
                       <NavLink href={path}>

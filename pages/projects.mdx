@@ -1,5 +1,5 @@
 import ProjectList from "Components/Projects/ProjectList";
-import { projects } from "Configs/projects";
+import config from "Config";
 
 export const meta = {
   title: "Projects",
@@ -7,4 +7,4 @@ export const meta = {
 
 # My Projects
 
-<ProjectList projects={projects.filter((p) => p.finished)} />
+<ProjectList projects={config.projects.filter((p) => p.finished)} />

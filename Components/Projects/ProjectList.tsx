@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { TProject } from "Configs/projects";
-
-import ProjectCard from "./ProjectCard";
+import Card from "Components/Card";
+import config from "Config";
 
 type Props = {
   projects: TProject[];
@@ -47,7 +46,7 @@ const ProjectGroup = ({
     </ProjectGroupTimelineWrapper>
     <ProjectGroupProjectsWrapper>
       {projects.map((project) => (
-        <ProjectCard key={project.name} project={project} />
+        <Card key={project.name} card={getCardFromProject(project)} />
       ))}
     </ProjectGroupProjectsWrapper>
   </ProjectGroupWrapper>
@@ -93,5 +92,15 @@ const ProjectGroupTimelineWrapper = styled.div`
   `}
 `;
 const ProjectGroupProjectsWrapper = styled.div``;
+
+const getCardFromProject = (project: TProject): TCard => ({
+  title: project.name,
+  markdownDescription: project.description,
+  tags: project.tags.sort(
+    (t1, t2) => config.tags.indexOf(t1) - config.tags.indexOf(t2)
+  ),
+  url: project.url,
+  sourceUrl: project.sourceUrl,
+});
 
 export default ProjectList;

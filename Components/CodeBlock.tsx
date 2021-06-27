@@ -36,8 +36,25 @@ const CodeBlock = ({ children, className = "language-typescript" }: Props) => {
 
 const Pre = styled.pre`
   text-align: left;
+  overflow-x: auto;
+  max-width: 80vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &::-webkit-scrollbar {
+    background-color: none;
+    height: 8px;
+  }
+
   ${({ theme }) => css`
-    padding: ${theme.spacing(1)}px;
+    padding: ${theme.spacing(2)}px ${theme.spacing(4)}px;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${theme.colors.secondaryText};
+    }
   `}
 `;
 const Line = styled.div``;

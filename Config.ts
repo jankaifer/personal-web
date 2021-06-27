@@ -1,6 +1,33 @@
 import { transformArrayToObjectByField } from "Utils/misc";
 
-export const tags = [
+const tabs: {
+  name: string;
+  path: string;
+}[] = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Blog",
+    path: "/blog",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "TODO list",
+    path: "/todo-list",
+  },
+];
+
+const values = {
+  name: "Jan Kaifer",
+  email: "jan@kaifer.cz",
+};
+
+const tags = [
   // Framework
   "React",
   "React Native",
@@ -15,30 +42,10 @@ export const tags = [
   "Backend",
   "Skill",
 ] as const;
-export const companyNames = ["Netrex", "Camstreamer", "Retino"] as const;
+export type _TTag = typeof tags[number];
+const companyNames = ["Netrex", "Camstreamer", "Retino"] as const;
 
-export type TTag = typeof tags[number];
-export type TCompanyName = typeof companyNames[number];
-
-export type TProject = {
-  name: string;
-  description: string;
-  tags: TTag[];
-  finished: boolean;
-  year: number;
-  active?: boolean;
-  url?: string;
-  sourceUrl?: string;
-  company?: TCompanyName;
-};
-
-export type TCompany = {
-  name: TCompanyName;
-  description: string;
-  url: string;
-};
-
-export const companies: TCompany[] = [
+const companies: TCompany[] = [
   {
     name: "Retino",
     description:
@@ -57,7 +64,7 @@ export const companies: TCompany[] = [
   },
 ];
 
-export const projects: TProject[] = [
+const projects: TProject[] = [
   {
     name: "Pochopím to",
     description: `Simple web app that allows teachers to get instant feedback from students.
@@ -172,4 +179,17 @@ export const projects: TProject[] = [
   },
 ];
 
-export const companiesByName = transformArrayToObjectByField(companies, "name");
+const companiesByName = transformArrayToObjectByField(companies, "name");
+
+const config = {
+  tabs,
+  values,
+  companies,
+  companiesByName,
+  companyNames,
+  projects,
+  tags,
+  postBasePath: "pages/blog/post",
+} as const;
+
+export default config;

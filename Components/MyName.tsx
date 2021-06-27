@@ -1,5 +1,5 @@
-import values from "Configs/values";
+import config from "Config";
 
-const MyName = () => <span>{values.name}</span>;
+const MyName = () => <span>{config.values.name}</span>;
 
 export default MyName;
