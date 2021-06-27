@@ -8,8 +8,14 @@ export const transformArrayToObjectByField = <
   field: K
 ) => Object.fromEntries(objs.map((obj) => [obj[field], obj]));
 
-export const getGravatarSrc = (email: string) => {
+export const getGravatarSrc = ({
+  email,
+  size = 80,
+}: {
+  email: string;
+  size?: number;
+}) => {
   const hash = md5(email.trim().toLowerCase());
-  const gravatarUri = `https://www.gravatar.com/avatar/${hash}`;
+  const gravatarUri = `https://www.gravatar.com/avatar/${hash}?s=${size}`;
   return gravatarUri;
 };

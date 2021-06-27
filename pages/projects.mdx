@@ -1,10 +1,13 @@
-import Layout from "Components/Layout";
-import Markdown from "Components/Markdown";
 import ProjectList from "Components/Projects/ProjectList";
 import { projects } from "Configs/projects";
-import markdown from "Docs/projects.md";
 
-<Layout title="Projects">
-  <Markdown>{markdown}</Markdown>
-  <ProjectList projects={projects.filter((p) => p.finished)} />
-</Layout>
+export const meta = {
+  title: "Projects",
+}
+
+# My Projects
+
+Projects that I have completed. Most of them are open-sourced on GitLab.
+I do not actively maintain most of them, but PRs are always welcome.
+
+<ProjectList projects={projects.filter((p) => p.finished)} />

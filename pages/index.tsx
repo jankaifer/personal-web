@@ -1,19 +1,73 @@
-// import { MarkdownProvider } from "next/mdx";
-
-import Image from "next/image";
+import styled, { css } from "styled-components";
 
 import Layout from "Components/Layout";
-import Markdown from "Components/Markdown";
-import markdown from "Docs/home.md";
-import { getGravatarSrc } from "Utils/misc";
+import MyAvatar from "Components/MyAvatar";
+import MyEmail from "Components/MyEmail";
+import MyName from "Components/MyName";
+
+export const meta = {
+  isHome: true,
+  title: "Home",
+};
 
 const Home = () => {
   return (
-    <Layout title="Home" home>
-      <Markdown>{markdown}</Markdown>
-      <Image src={getGravatarSrc("jan@kaifer.cz")} width={100} height={100} />
+    <Layout meta={meta}>
+      <Wrapper>
+        <ImageWrapper>
+          <MyAvatar size={160} round />
+        </ImageWrapper>
+        <TextWrapper>
+          <h1>About me</h1>
+          <p>
+            My name is <MyName />. I am a student, programmer, learner, and
+            gamer.
+          </p>
+
+          <p>
+            Interesting projects and ideas are always welcome. Drop me a message
+            at <MyEmail />.
+          </p>
+        </TextWrapper>
+      </Wrapper>
     </Layout>
   );
 };
+
+const TextWrapper = styled.div``;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: flex-start;
+
+  ${({ theme }) =>
+    theme.breakpoints.onBreakpoint(
+      "sm",
+      css`
+        margin: ${theme.spacing(2)}px;
+      `,
+      css`
+        margin: ${theme.spacing(4)}px 0;
+        padding-right: ${theme.spacing(6)}px;
+      `
+    )}
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+
+  ${({ theme }) =>
+    theme.breakpoints.onBreakpoint(
+      "sm",
+      css`
+        flex-direction: column;
+      `,
+      css`
+        flex-direction: row;
+      `
+    )}
+`;
 
 export default Home;
