@@ -42,6 +42,7 @@ const tags = [
   "Backend",
   "Skill",
 ] as const;
+
 export type _TTag = typeof tags[number];
 const companyNames = ["Netrex", "Camstreamer", "Retino"] as const;
 
@@ -152,11 +153,14 @@ const projects: TProject[] = [
     year: 2021,
   },
   {
-    name: "Factorio like graphical programming language",
-    description:
-      "I think that Factorio like factory can be used to create simple functional programs.",
-    tags: [],
+    name: "Factorio like visual programming language",
+    description: `I think that Factorio-like factory can be used to create simple functional programs.
+      Languages like scratch or NodeRED are trying to visualize the code itself.
+      But I think that visualizing the execution would be really cool, I could help some people to understand the code better.
+      `,
+    tags: ["Web app", "React"],
     finished: false,
+    active: true,
     year: 2021,
   },
   {
