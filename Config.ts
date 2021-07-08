@@ -25,6 +25,8 @@ const tabs: {
 const values = {
   name: "Jan Kaifer",
   email: "jan@kaifer.cz",
+  cvUrl:
+    "https://docs.google.com/document/d/1HuG7H6wAQmUUJnyS3JtPlIeXOQvA1eHDQv5SHx6z3vk/export?format=pdf",
 };
 
 const tags = [

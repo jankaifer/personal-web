@@ -34,7 +34,7 @@ const Card = ({
     {tags !== undefined && (
       <TagsWrapper>
         {tags.map((tag) => (
-          <ProjectTag>{tag}</ProjectTag>
+          <ProjectTag key={tag}>{tag}</ProjectTag>
         ))}
       </TagsWrapper>
     )}
