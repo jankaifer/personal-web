@@ -183,6 +183,14 @@ const projects: TProject[] = [
     tags: ["Skill"],
     year: 2021,
   },
+  {
+    name: "T-shirt",
+    description: "Simple, fast and reliable MPD client.",
+    finished: true,
+    sourceUrl: "https://gitlab.com/JanKaifer/tshirt",
+    tags: ["React", "Web app"],
+    year: 2021,
+  },
 ];
 
 const companiesByName = transformArrayToObjectByField(companies, "name");
