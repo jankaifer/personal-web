@@ -17,7 +17,7 @@ const Home = () => {
     <Layout meta={meta}>
       <Wrapper>
         <ImageWrapper>
-          <MyAvatar size={160} round />
+          <MyAvatar size={160} round priority />
         </ImageWrapper>
         <TextWrapper>
           <p>
