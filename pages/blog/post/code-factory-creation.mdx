@@ -19,6 +19,16 @@ It is closer to real computers. But I think that visualizing data flow could hel
 For example, debugging Factorio factories is relatively easy.
 When you see coal somewhere where you do not expect it, you can follow that conveyor belt and find the issue.
 
-## About this post
+## First architecture (Entity first)
 
-I wanted to share few interesting problems that I had to overcome and which most Factorio players don't know about.
+At first I though I will create grid, entities.
+And those entities will just move items to other entities (and modify them if needed).
+I started with just conveyor belts.
+Every tick I just looped over all entities and did their action.
+The issue issue is that I looped through conveyor belts from left to right, so items move to the right significantly faster then they moved to the left (they have been moved two times in single tick when they moved between entities).
+
+## Second architecture (Item first)
+
+I could implemented workarounds for the first architecture, but I wanted to try something better.
+My second architecture is item first.
+I will track all items, with their position and what entities contain them. This will allow me to loop through all items, instead of all entities, which will make sure that I don't move single item twice.
