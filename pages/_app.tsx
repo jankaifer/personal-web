@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MDXProvider } from "@mdx-js/react";
-import { range } from "fp-ts/lib/ReadonlyNonEmptyArray";
 import { AppProps } from "next/app";
 import styled, {
   createGlobalStyle,
