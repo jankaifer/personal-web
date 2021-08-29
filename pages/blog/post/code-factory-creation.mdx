@@ -32,3 +32,7 @@ The issue issue is that I looped through conveyor belts from left to right, so i
 I could implemented workarounds for the first architecture, but I wanted to try something better.
 My second architecture is item first.
 I will track all items, with their position and what entities contain them. This will allow me to loop through all items, instead of all entities, which will make sure that I don't move single item twice.
+It still has few issues.
+Like I won't be able to move full belt to the right (but I can do to the left).
+But this is generally har problem and without computing and solcing some kind of dependency graph I won't be able to fix this issue.
+It wouldn't be that big problem if I chose physics base incremental moving.
