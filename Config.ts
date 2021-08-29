@@ -156,7 +156,7 @@ const projects: TProject[] = [
   },
   {
     name: "Code Factory [WIP]",
-    description: `Factorio-base programming language. I thought I would be cool to have visual language that is inspired by factorio, so I'm making one.`,
+    description: `Factorio-based visual programming language. I thought I would be a great way to learn functional programing.`,
     url: "https://code-factory.kaifer.cz/",
     sourceUrl: "https://gitlab.com/JanKaifer/code-factory",
     tags: ["Web app", "React"],
