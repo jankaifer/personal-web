@@ -155,11 +155,10 @@ const projects: TProject[] = [
     year: 2021,
   },
   {
-    name: "Factorio like visual programming language",
-    description: `I think that Factorio-like factory can be used to create simple functional programs.
-      Languages like scratch or NodeRED are trying to visualize the code itself.
-      But I think that visualizing the execution would be really cool, I could help some people to understand the code better.
-      `,
+    name: "Code Factory [WIP]",
+    description: `Factorio-base programming language. I thought I would be cool to have visual language that is inspired by factorio, so I'm making one.`,
+    url: "https://code-factory.kaifer.cz/",
+    sourceUrl: "https://gitlab.com/JanKaifer/code-factory",
     tags: ["Web app", "React"],
     finished: false,
     active: true,
