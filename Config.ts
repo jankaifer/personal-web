@@ -155,10 +155,10 @@ const projects: TProject[] = [
     year: 2021,
   },
   {
-    name: "Code Factory [WIP]",
+    name: "Code Factory",
     description: `Factorio-based visual programming language. I thought I would be a great way to learn functional programing.`,
-    url: "https://code-factory.kaifer.cz/",
-    sourceUrl: "https://gitlab.com/JanKaifer/code-factory",
+    // url: "https://code-factory.kaifer.cz/",
+    // sourceUrl: "https://gitlab.com/JanKaifer/code-factory",
     tags: ["Web app", "React"],
     finished: false,
     active: true,
