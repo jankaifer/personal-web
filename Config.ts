@@ -165,6 +165,13 @@ const projects: TProject[] = [
     year: 2021,
   },
   {
+    name: "Fujtajbl share",
+    description: "Allows you to share files through WebRTC with QR codes.",
+    tags: ["Web app", "React"],
+    finished: false,
+    year: 2021,
+  },
+  {
     name: "Netrex mobile app",
     description:
       "Mobile app for [Netrex](https://www.netrex.cz/en/) in React Native. Android & iOS app that can live stream video from IP cameras. We had to create our custom video player and protocol to achieve the best possible performance.",
