@@ -21,25 +21,13 @@ const Home = () => {
         </ImageWrapper>
         <TextWrapper>
           <p>
-            My name is <MyName />. I am a student, programmer, problem solver,
-            and gamer.
+            My name is <MyName />. I am a student, programmer and problem
+            solver.
           </p>
 
           <p>
             Interesting projects and ideas are always welcome. Drop me a message
             at <MyEmail />.
-          </p>
-
-          <p>
-            Other stuff you might be looking for:{" "}
-            <a href={config.values.cvUrl}>CV</a>,{" "}
-            <Link href="/projects">
-              <a href="/projects">projects</a>
-            </Link>{" "}
-            or{" "}
-            <Link href="/todo-list">
-              <a href="/todo-list">TODO list</a>
-            </Link>
           </p>
         </TextWrapper>
       </Wrapper>
