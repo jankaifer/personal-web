@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Link from "next/link";
 
 import Layout from "Components/Layout";
 import { getBlogs } from "Utils/static";
@@ -11,7 +12,16 @@ type Props = {
   posts: TPost[];
 };
 
-const Post = ({ post }: { post: TPost }) => <div></div>;
+const Post = ({ post }: { post: TPost }) => {
+  const href = `/blog/post/${post.tag}`;
+  return (
+    <Link href={href}>
+      <a href={href}>
+        <h3>{post.title}</h3>
+      </a>
+    </Link>
+  );
+};
 
 const BlogHome = ({ posts }: Props) => (
   <Layout meta={meta}>
