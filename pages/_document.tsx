@@ -1,5 +1,10 @@
-import { DocumentContext } from "next/dist/next-server/lib/utils";
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 import favicon from "Assets/images/favicon.ico";
@@ -36,7 +41,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href={favicon} />
+          <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Jan Kaifer's personal website." />
           <meta name="robots" content="nosnippet" />
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
