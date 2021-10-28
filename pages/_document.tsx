@@ -7,8 +7,6 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-import favicon from "Assets/images/favicon.ico";
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
