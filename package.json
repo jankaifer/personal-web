@@ -22,20 +22,20 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.0.1",
+    "@next/mdx": "^12.0.1",
     "crypto-js": "^4.0.0",
     "dayjs": "^1.9.6",
     "file-loader": "^6.2.0",
     "fp-ts": "^2.8.6",
     "glob": "^7.1.7",
     "io-ts": "^2.2.13",
-    "next": "11.0.1",
+    "next": "12.0.1",
     "next-images": "^1.6.2",
     "prism-react-renderer": "^1.2.1",
     "raw-loader": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-markdown": "^6.0.3",
+    "react-markdown": "^7.1.0",
     "styled-components": "^5"
   },
   "devDependencies": {
