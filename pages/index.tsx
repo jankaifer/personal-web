@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 import Layout from "Components/Layout";
-import Markdown from "Components/Markdown";
 import MyAvatar from "Components/MyAvatar";
 import MyEmail from "Components/MyEmail";
 import MyName from "Components/MyName";

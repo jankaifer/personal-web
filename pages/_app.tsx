@@ -73,6 +73,7 @@ const GlobalStyle = createGlobalStyle`
 const components = {
   wrapper: (props: React.ComponentProps<typeof Layout>) =>
     props.meta === undefined ? <>{props.children}</> : <Layout {...props} />,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pre: ({ children: { props } }: any) => <CodeBlock {...props} />,
 };
 
