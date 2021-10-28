@@ -1,5 +1,3 @@
-import { transformArrayToObjectByField } from "Utils/misc";
-
 const tabs: {
   name: string;
   path: string;
