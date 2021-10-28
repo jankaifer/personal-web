@@ -13,10 +13,9 @@ type Props = {
 };
 
 const Post = ({ post }: { post: TPost }) => {
-  const href = `/blog/post/${post.tag}`;
   return (
-    <Link href={href}>
-      <a href={href}>
+    <Link href={`/blog/post/${post.tag}`} passHref>
+      <a>
         <h3>{post.title}</h3>
       </a>
     </Link>

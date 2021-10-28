@@ -25,18 +25,18 @@ const Layout = ({
       <RootDiv>
         <Header>
           <HeaderContent>
-            <Link href="/">
-              <Logo href="/">
+            <Link href="/" passHref>
+              <Logo>
                 <LogoName>{config.values.name}</LogoName>
-                <LogoRest>'s web</LogoRest>
+                <LogoRest>{"'s web"}</LogoRest>
               </Logo>
             </Link>
             <Nav>
               <NavList>
                 {config.tabs.map(({ name, path }) => (
                   <NavItem key={path}>
-                    <Link href={path}>
-                      <NavLink href={path}>
+                    <Link href={path} passHref>
+                      <NavLink>
                         <span>{name}</span>
                       </NavLink>
                     </Link>
@@ -55,8 +55,8 @@ const Layout = ({
         <Footer>
           <FooterContent>
             {!isHome && (
-              <Link href="/">
-                <a href="/">&larr; Go back home</a>
+              <Link href="/" passHref>
+                <a>&larr; Go back home</a>
               </Link>
             )}
           </FooterContent>

@@ -5,7 +5,7 @@ type ReactMarkdownProps = React.ComponentProps<typeof ReactMarkdown>;
 type Props = Required<Pick<ReactMarkdownProps, "children">>;
 
 const Markdown = ({ children, ...rest }: Props) => (
-  <ReactMarkdown children={children} {...rest} />
+  <ReactMarkdown {...rest}>{children}</ReactMarkdown>
 );
 
 export default Markdown;
