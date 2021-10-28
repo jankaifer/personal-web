@@ -1,11 +1,9 @@
-import Link from "next/link";
 import styled, { css } from "styled-components";
 
 import Layout from "Components/Layout";
 import MyAvatar from "Components/MyAvatar";
 import MyEmail from "Components/MyEmail";
 import MyName from "Components/MyName";
-import config from "Config";
 
 export const meta = {
   isHome: true,

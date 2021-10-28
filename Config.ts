@@ -4,21 +4,13 @@ const tabs: {
   name: string;
   path: string;
 }[] = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
   // {
-  //   name: "Projects",
-  //   path: "/projects",
+  //   name: "Home",
+  //   path: "/",
   // },
   // {
-  //   name: "TODO list",
-  //   path: "/todo-list",
+  //   name: "Blog",
+  //   path: "/blog",
   // },
 ];
 
