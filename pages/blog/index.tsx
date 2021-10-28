@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 
-import PostList from "Components/Blog/PostList";
 import Layout from "Components/Layout";
 import { getBlogs } from "Utils/static";
 
@@ -12,14 +11,16 @@ type Props = {
   posts: TPost[];
 };
 
-const BlogHome = ({ posts }: Props) => {
-  return (
-    <Layout meta={meta}>
-      <h1>Welcome to my blog</h1>
-      <PostList posts={posts} />
-    </Layout>
-  );
-};
+const Post = ({ post }: { post: TPost }) => <div></div>;
+
+const BlogHome = ({ posts }: Props) => (
+  <Layout meta={meta}>
+    <h1>Welcome to my blog</h1>
+    {posts.map((post, i) => (
+      <Post key={i} post={post} />
+    ))}
+  </Layout>
+);
 
 export const getStaticProps: GetStaticProps<Props> = async (_) => {
   return {
