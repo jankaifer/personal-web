@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import Layout from "Components/Layout";
+import Markdown from "Components/Markdown";
 import MyAvatar from "Components/MyAvatar";
 import MyEmail from "Components/MyEmail";
 import MyName from "Components/MyName";
@@ -19,13 +20,29 @@ const Home = () => {
         </ImageWrapper>
         <TextWrapper>
           <p>
-            My name is <MyName />. I am a student, programmer and problem
-            solver.
+            Hey, My name is <MyName />.
           </p>
 
           <p>
-            Interesting projects and ideas are always welcome. Drop me a message
-            at <MyEmail />.
+            I&apos;m currently pursuing my Bachelor&apos;s degree in computer
+            science at <a href="https://cuni.cz/">Charles University</a>.
+          </p>
+
+          <p>
+            Unordered list of things that I find interesting:{" "}
+            <a href="https://reactjs.org/">react</a>,{" "}
+            <a href="https://en.wikipedia.org/wiki/Functional_programming">
+              functional programming
+            </a>
+            ,{" "}
+            <a href="https://en.wikipedia.org/wiki/Test-driven_development">
+              test driven development
+            </a>
+            , <a href="https://nixos.org/">nix</a>.
+          </p>
+
+          <p>
+            Get in touch at <MyEmail />
           </p>
         </TextWrapper>
       </Wrapper>
