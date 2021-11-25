@@ -19,7 +19,7 @@ const Home = () => {
         </ImageWrapper>
         <TextWrapper>
           <p>
-            Hey, My name is <MyName />.
+            Hey, my name is <MyName />.
           </p>
 
           <p>
