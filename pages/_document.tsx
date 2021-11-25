@@ -7,6 +7,8 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
+import "./montserrat.css";
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -43,10 +45,6 @@ export default class MyDocument extends Document {
           <meta name="description" content="Jan Kaifer's personal website." />
           <meta name="robots" content="nosnippet" />
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
-            rel="stylesheet"
-          ></link>
         </Head>
         <body>
           <Main />
