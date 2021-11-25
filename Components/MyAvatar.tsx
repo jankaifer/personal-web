@@ -15,6 +15,7 @@ const MyAvatar = ({ size, round = false, css = "", ...rest }: Props) => (
   <StyledImage
     $round={round}
     $css={css}
+    alt={`${config.values.name.toLowerCase().replace(" ", "-")}-avatar`}
     src={getGravatarSrc({ email: config.values.email, size: size * 2 })}
     width={size}
     height={size}
