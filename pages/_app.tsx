@@ -12,6 +12,8 @@ import CodeBlock from "Components/CodeBlock";
 import Layout from "Components/Layout";
 import Theme from "Themes/Theme";
 
+import "Assets/fonts/montserrat.css";
+
 const GlobalStyle = createGlobalStyle`
   html, body, body > div {
     min-height: 100%;
