@@ -8,11 +8,14 @@ import styled, {
   ThemeProvider,
 } from "styled-components";
 
+import montserrat from "Assets/images/fonts/montserrat";
 import CodeBlock from "Components/CodeBlock";
 import Layout from "Components/Layout";
 import Theme from "Themes/Theme";
 
 const GlobalStyle = createGlobalStyle`
+  ${montserrat}
+
   html, body, body > div {
     min-height: 100%;
     display: flex;
