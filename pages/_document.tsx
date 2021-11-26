@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Jan Kaifer's personal website." />
           <meta name="robots" content="nosnippet" />
-          <style>{montserrat}</style>
+          <style dangerouslySetInnerHTML={{ __html: montserrat }} />
         </Head>
         <body>
           <Main />
