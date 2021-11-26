@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { AppProps } from "next/app";
+import Script from "next/script";
 import styled, {
   createGlobalStyle,
   css,
@@ -85,6 +86,14 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-161532344-2" />
+      <Script id="google-analytics-init">
+        {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-161532344-2');`}
+      </Script>
       <MDXProvider components={components}>
         <NoScriptBanners />
         <Component {...pageProps} />
