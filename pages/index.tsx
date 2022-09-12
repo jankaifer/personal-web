@@ -33,10 +33,6 @@ const Home = () => {
             <a href="https://en.wikipedia.org/wiki/Functional_programming">
               functional programming
             </a>
-            ,{" "}
-            <a href="https://en.wikipedia.org/wiki/Test-driven_development">
-              test driven development
-            </a>
             , <a href="https://nixos.org/">nix</a>.
           </p>
 
