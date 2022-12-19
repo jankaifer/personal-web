@@ -5,6 +5,7 @@ overrides:
 
 specifiers:
   '@mdx-js/loader': ^1.6.22
+  '@next/font': ^13.0.7
   '@next/mdx': ^12.0.1
   '@types/crypto-js': ^4.0.1
   '@types/glob': ^8.0.0
@@ -38,6 +39,7 @@ specifiers:
 
 dependencies:
   '@mdx-js/loader': 1.6.22_react@18.2.0
+  '@next/font': 13.0.7
   '@next/mdx': 12.3.4_@mdx-js+loader@1.6.22
   '@types/glob': 8.0.0
   crypto-js: 4.1.1
@@ -516,6 +518,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.7:
+    resolution: {integrity: sha512-39SzuoMI6jbrIzPs3KtXdKX03OrVp6Y7kRHcoVmOg69spiBzruPJ5x5DQSfN+OXqznbvVBNZBXnmdnSqs3qXiA==}
+    dev: false
 
   /@next/mdx/12.3.4_@mdx-js+loader@1.6.22:
     resolution: {integrity: sha512-YTF/ph9NMKjmrNsr8O+y3IiZee9TaxSd6051qI0Fj/du75pKRRZ1DnOX6ZS7mMgswH7VMERVV7fBZxmJr9sN7Q==}

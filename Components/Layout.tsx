@@ -48,11 +48,7 @@ const Layout = ({
         </SiteContent>
         <Footer>
           <FooterContent>
-            {!isHome && (
-              <Link href="/" passHref>
-                <a>&larr; Go back home</a>
-              </Link>
-            )}
+            {!isHome && <Link href="/">&larr; Go back home</Link>}
           </FooterContent>
         </Footer>
       </RootDiv>

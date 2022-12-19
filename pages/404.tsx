@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Layout from "Components/Layout";
+import Link from "next/link";
 
 const H1 = styled.h1`
   text-align: center;
@@ -21,9 +22,9 @@ const Error404 = () => {
     >
       <H1>Content is not available in your country</H1>
       <XKCDLinkWrapper>
-        <a href="https://xkcd.com/1969/">
+        <Link href="https://xkcd.com/1969/">
           -- Stolen from <b>xkcd</b>
-        </a>
+        </Link>
       </XKCDLinkWrapper>
     </Layout>
   );

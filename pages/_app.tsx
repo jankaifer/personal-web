@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { AppProps } from "next/app";
-import Script from "next/script";
 import styled, {
   createGlobalStyle,
   css,
   keyframes,
   ThemeProvider,
 } from "styled-components";
-
 import CodeBlock from "Components/CodeBlock";
 import Layout from "Components/Layout";
 import Theme from "Themes/Theme";
+import { Montserrat } from "@next/font/google";
 
-import "Assets/fonts/montserrat.css";
+const font = Montserrat({ subsets: ["latin"] });
 
 const GlobalStyle = createGlobalStyle`
   html, body, body > div {
@@ -27,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     width: 100vw;
     overflow-x: hidden;
+    font-family: ${font.style.fontFamily};
   }
 
   ${({ theme }) => css`
@@ -86,14 +86,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-161532344-2" />
-      <Script id="google-analytics-init">
-        {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-161532344-2');`}
-      </Script>
       <MDXProvider components={components}>
         <NoScriptBanners />
         <Component {...pageProps} />
