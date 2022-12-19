@@ -24,17 +24,9 @@ const Home = () => {
           </p>
 
           <p>
-            I&apos;m currently pursuing my Bachelor&apos;s degree in computer
-            science at <Link href="https://cuni.cz/">Charles University</Link>.
-          </p>
-
-          <p>
-            Unordered list of things that I find interesting:{" "}
-            <Link href="https://reactjs.org/">react</Link>,{" "}
-            <Link href="https://en.wikipedia.org/wiki/Functional_programming">
-              functional programming
-            </Link>
-            , <Link href="https://nixos.org/">nix</Link>.
+            I&apos;m currently working on{" "}
+            <Link href="https://nextjs.org">next.js</Link> at{" "}
+            <Link href="https://vercel.com">▲Vercel</Link>
           </p>
 
           <p>
