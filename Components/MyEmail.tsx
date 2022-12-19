@@ -1,7 +1,8 @@
 import config from "Config";
+import Link from "next/link";
 
 const MyEmail = () => (
-  <a href={`mailto:${config.values.email}`}>{config.values.email}</a>
+  <Link href={`mailto:${config.values.email}`}>{config.values.email}</Link>
 );
 
 export default MyEmail;

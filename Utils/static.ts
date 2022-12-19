@@ -1,6 +1,8 @@
 import config from "Config";
+import glob from "glob";
 
 const loadBlog = (blogTag: string): TPost => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const importedData = require(`../${config.postBasePath}/${blogTag}.mdx`);
   const meta = importedData.meta as TMeta;
 
@@ -13,7 +15,7 @@ const loadBlog = (blogTag: string): TPost => {
 };
 
 export const getBlogs = () => {
-  const blogTags = require("glob")
+  const blogTags = glob
     .sync(`${config.postBasePath}/*`)
     .map((path: string) => path.split("/").reverse()[0].split(".")[0]);
   return blogTags.map(loadBlog);

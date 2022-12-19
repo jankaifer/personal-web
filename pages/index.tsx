@@ -4,6 +4,7 @@ import Layout from "Components/Layout";
 import MyAvatar from "Components/MyAvatar";
 import MyEmail from "Components/MyEmail";
 import MyName from "Components/MyName";
+import Link from "next/link";
 
 export const meta = {
   isHome: true,
@@ -24,16 +25,16 @@ const Home = () => {
 
           <p>
             I&apos;m currently pursuing my Bachelor&apos;s degree in computer
-            science at <a href="https://cuni.cz/">Charles University</a>.
+            science at <Link href="https://cuni.cz/">Charles University</Link>.
           </p>
 
           <p>
             Unordered list of things that I find interesting:{" "}
-            <a href="https://reactjs.org/">react</a>,{" "}
-            <a href="https://en.wikipedia.org/wiki/Functional_programming">
+            <Link href="https://reactjs.org/">react</Link>,{" "}
+            <Link href="https://en.wikipedia.org/wiki/Functional_programming">
               functional programming
-            </a>
-            , <a href="https://nixos.org/">nix</a>.
+            </Link>
+            , <Link href="https://nixos.org/">nix</Link>.
           </p>
 
           <p>

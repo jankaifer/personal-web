@@ -18,28 +18,22 @@ const Layout = ({
   return (
     <>
       <Head>
-        <title>
-          {config.values.name} - {title}
-        </title>
+        <title>{`${config.values.name} - ${title}`}</title>
       </Head>
       <RootDiv>
         <Header>
           <HeaderContent>
-            <Link href="/" passHref>
-              <Logo>
-                <LogoName>{config.values.name}</LogoName>
-                <LogoRest>{"'s web"}</LogoRest>
-              </Logo>
-            </Link>
+            <LogoLink href="/">
+              <LogoName>{config.values.name}</LogoName>
+              <LogoRest>{"'s web"}</LogoRest>
+            </LogoLink>
             <Nav>
               <NavList>
                 {config.tabs.map(({ name, path }) => (
                   <NavItem key={path}>
-                    <Link href={path} passHref>
-                      <NavLink>
-                        <span>{name}</span>
-                      </NavLink>
-                    </Link>
+                    <NavLink href={path}>
+                      <span>{name}</span>
+                    </NavLink>
                   </NavItem>
                 ))}
               </NavList>
@@ -94,7 +88,7 @@ const HeaderContent = styled.div`
   `}
 `;
 
-const Logo = styled.a`
+const LogoLink = styled(Link)`
   ${({ theme }) => css`
     font-size: ${theme.sizes.logo};
     color: ${theme.colors.text};
@@ -160,7 +154,7 @@ const NavItem = styled.li`
   display: flex;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   display: flex;
   align-items: center;
 
