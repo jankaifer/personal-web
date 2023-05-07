@@ -24,9 +24,8 @@ const Home = () => {
           </p>
 
           <p>
-            I&apos;m currently working on{" "}
-            <Link href="https://nextjs.org">next.js</Link> at{" "}
-            <Link href="https://vercel.com">▲Vercel</Link>
+            I&apos;m a software engineer and I&apos;m always looking for new
+            interesting problems.
           </p>
 
           <p>
