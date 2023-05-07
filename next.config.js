@@ -29,4 +29,16 @@ module.exports = withMDX({
       ],
     },
   }),
+  redirects() {
+    return {
+      source: "/",
+      destination:
+        "https://calendar.google.com/calendar/u/0/appointments/AcZssZ3VtrzeX4617i0dwa_Ir0QNT41mizoow5pw6jg=",
+      has: {
+        type: "host",
+        value: "schedule.kaifer.cz",
+      },
+      permanent: false,
+    };
+  },
 });
