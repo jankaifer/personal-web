@@ -4,7 +4,6 @@ import Layout from "Components/Layout";
 import MyAvatar from "Components/MyAvatar";
 import MyEmail from "Components/MyEmail";
 import MyName from "Components/MyName";
-import Link from "next/link";
 
 export const meta = {
   isHome: true,
