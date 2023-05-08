@@ -23,11 +23,6 @@ const Home = () => {
           </p>
 
           <p>
-            I&apos;m a software engineer and I&apos;m always looking for new
-            interesting problems.
-          </p>
-
-          <p>
             Get in touch at <MyEmail />
           </p>
         </TextWrapper>
